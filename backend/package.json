@@ -1,7 +1,7 @@
 {
-  "name": "sage-backend",
+  "name": "shoptaq-backend",
   "version": "1.0.0",
-  "description": "Sage AI Backend API",
+  "description": "Shoptaq Backend API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

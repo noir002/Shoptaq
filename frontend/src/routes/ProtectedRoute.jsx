@@ -9,7 +9,7 @@ const ProtectedRoute = () => {
       <div className="flex items-center justify-center h-screen bg-dark-900">
         <div className="flex flex-col items-center gap-4">
           <div className="w-10 h-10 spinner" />
-          <p className="text-white/40 text-sm">Loading Sage AI...</p>
+          <p className="text-white/40 text-sm">Loading Shoptaq...</p>
         </div>
       </div>
     );

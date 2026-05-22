@@ -46,7 +46,7 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
         </div>
         {!collapsed && (
           <div className="animate-fade-in overflow-hidden">
-            <h1 className="text-white font-bold text-base leading-none tracking-tight">Sage</h1>
+            <h1 className="text-white font-bold text-base leading-none tracking-tight">Shoptaq</h1>
             <span className="text-secondary text-xs font-semibold uppercase tracking-wider font-label-sm">AI Command</span>
           </div>
         )}

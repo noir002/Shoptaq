@@ -12,7 +12,7 @@ const pageTitles = {
 const Navbar = () => {
   const { pathname } = useLocation();
   const { user } = useAuth();
-  const pageInfo = pageTitles[pathname] || { title: 'Sage AI', subtitle: '' };
+  const pageInfo = pageTitles[pathname] || { title: 'Shoptaq', subtitle: '' };
 
   return (
     <header className="h-20 flex items-center justify-between px-8 border-b border-white/10 bg-surface-container-low/40 backdrop-blur-xl z-20">

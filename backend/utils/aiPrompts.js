@@ -1,5 +1,5 @@
 /**
- * Reusable AI prompt builder functions for Sage AI
+ * Reusable AI prompt builder functions for Shoptaq
  */
 
 // Safely convert anything (string, array, undefined) to an array

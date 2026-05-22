@@ -1,4 +1,4 @@
-# Sage AI 🚀
+# Shoptaq 🚀
 
 > An AI-powered ecommerce admin dashboard built with React, Node.js, MongoDB, and Google Gemini.
 
@@ -19,7 +19,7 @@
 ## 🗂️ Project Structure
 
 ```
-sage/
+shoptaq/
 ├── backend/              # Node.js + Express API
 │   ├── config/           # DB connection
 │   ├── controllers/      # Route handlers
@@ -53,7 +53,7 @@ sage/
 
 ```bash
 # Install backend dependencies
-cd sage/backend
+cd backend
 npm install
 
 # Install frontend dependencies
@@ -68,12 +68,21 @@ npm install
 cp backend/.env.example backend/.env
 
 # Edit backend/.env:
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/sage
+PORT=5001
+MONGO_URI=mongodb://127.0.0.1:27017/shoptaq
 JWT_SECRET=your_super_secret_key_here
 GEMINI_API_KEY=AIzaSy...   # Optional — mock data used if omitted
 NODE_ENV=development
 ```
+
+Create `frontend/.env` from the example:
+
+```bash
+cp frontend/.env.example frontend/.env
+# VITE_API_URL=http://localhost:5001/api
+```
+
+> **Note:** On macOS, port 5000 is often used by AirPlay. This project defaults to **5001**.
 
 ### 3. Seed Database
 
@@ -83,7 +92,7 @@ npm run seed
 ```
 
 This creates 20 sample products, sales history, and an admin account:
-- **Email:** `admin@sage.com`
+- **Email:** `admin@shoptaq.com`
 - **Password:** `password123`
 
 ### 4. Start Servers
@@ -144,7 +153,7 @@ Open **http://localhost:5173** 🎉
 
 ## 🤖 AI Integration
 
-Sage AI uses **Google Gemini**. All 5 AI tools include graceful fallback mock data, so the app works perfectly without an API key during development.
+Shoptaq uses **Google Gemini**. All 5 AI tools include graceful fallback mock data, so the app works perfectly without an API key during development.
 
 To enable real AI: add your key to `backend/.env`:
 ```

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5001/api',
   timeout: 15000,
   headers: { 'Content-Type': 'application/json' },
 });
@@ -9,7 +9,7 @@ const api = axios.create({
 // Inject JWT token on every request
 api.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('sage_token');
+    const token = localStorage.getItem('shoptaq_token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -23,8 +23,8 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      localStorage.removeItem('sage_token');
-      localStorage.removeItem('sage_user');
+      localStorage.removeItem('shoptaq_token');
+      localStorage.removeItem('shoptaq_user');
       window.location.href = '/login';
     }
     return Promise.reject(error);

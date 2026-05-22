@@ -66,7 +66,7 @@ const Signup = () => {
             </svg>
           </div>
           <h2 className="text-4xl font-extrabold text-white mb-4 leading-tight tracking-tight">
-            Join Sage <span className="gradient-text font-black">AI</span>
+            Join <span className="gradient-text font-black">Shoptaq</span>
           </h2>
           <p className="text-on-surface-variant text-lg leading-relaxed font-body-md">
             Get real-time insights and copy recommendations from Google Gemini.
@@ -101,7 +101,7 @@ const Signup = () => {
                     </defs>
                   </svg>
                 </div>
-                <span className="text-white font-bold text-lg tracking-tight">Sage AI</span>
+                <span className="text-white font-bold text-lg tracking-tight">Shoptaq</span>
               </div>
               <h1 className="text-3xl font-extrabold text-white mb-2 tracking-tight">Create account</h1>
               <p className="text-on-surface-variant text-sm">Set up your admin command center in seconds</p>

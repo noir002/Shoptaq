@@ -60,7 +60,7 @@ const Login = () => {
             </svg>
           </div>
           <h2 className="text-4xl font-extrabold text-white mb-4 leading-tight tracking-tight">
-            Sage <span className="gradient-text font-black">AI</span>
+            <span className="gradient-text font-black">Shoptaq</span>
           </h2>
           <p className="text-on-surface-variant text-lg leading-relaxed font-body-md">
             The premium dark SaaS ecommerce command center powered by Google Gemini.
@@ -96,7 +96,7 @@ const Login = () => {
                     </defs>
                   </svg>
                 </div>
-                <span className="text-white font-bold text-lg tracking-tight">Sage AI</span>
+                <span className="text-white font-bold text-lg tracking-tight">Shoptaq</span>
               </div>
               <h1 className="text-3xl font-extrabold text-white mb-2 tracking-tight">Welcome back</h1>
               <p className="text-on-surface-variant text-sm">Sign in to your admin command center</p>
@@ -113,7 +113,7 @@ const Login = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="input pl-11"
-                    placeholder="admin@sage.com"
+                    placeholder="admin@shoptaq.com"
                     autoComplete="email"
                   />
                 </div>

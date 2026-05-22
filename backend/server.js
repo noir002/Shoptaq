@@ -48,7 +48,7 @@ app.use('/api/analytics', require('./routes/analytics'));
 
 // Health check
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'ok', message: 'Sage AI API is running 🚀' });
+  res.json({ status: 'ok', message: 'Shoptaq API is running 🚀' });
 });
 
 // 404 handler
@@ -66,5 +66,5 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Sage AI server running on http://localhost:${PORT}`);
+  console.log(`🚀 Shoptaq server running on http://localhost:${PORT}`);
 });

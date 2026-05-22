@@ -12,8 +12,8 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const storedToken = localStorage.getItem('sage_token');
-    const storedUser = localStorage.getItem('sage_user');
+    const storedToken = localStorage.getItem('shoptaq_token');
+    const storedUser = localStorage.getItem('shoptaq_user');
     if (storedToken && storedUser) {
       setToken(storedToken);
       setUser(JSON.parse(storedUser));
@@ -24,15 +24,15 @@ export const AuthProvider = ({ children }) => {
   const login = (userData, jwtToken) => {
     setUser(userData);
     setToken(jwtToken);
-    localStorage.setItem('sage_token', jwtToken);
-    localStorage.setItem('sage_user', JSON.stringify(userData));
+    localStorage.setItem('shoptaq_token', jwtToken);
+    localStorage.setItem('shoptaq_user', JSON.stringify(userData));
   };
 
   const logout = () => {
     setUser(null);
     setToken(null);
-    localStorage.removeItem('sage_token');
-    localStorage.removeItem('sage_user');
+    localStorage.removeItem('shoptaq_token');
+    localStorage.removeItem('shoptaq_user');
   };
 
   return (

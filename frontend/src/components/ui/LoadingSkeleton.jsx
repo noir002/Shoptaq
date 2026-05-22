@@ -2,7 +2,7 @@ const LoadingSkeleton = ({ rows = 5 }) => {
   return (
     <div className="space-y-3">
       {Array.from({ length: rows }).map((_, i) => (
-        <div key={i} className="flex items-center gap-4 p-4 rounded-xl bg-white/3">
+        <div key={i} className="flex items-center gap-4 p-4 rounded-xl bg-surface-muted/40">
           <div className="skeleton w-10 h-10 rounded-xl flex-shrink-0" style={{ animationDelay: `${i * 0.1}s` }} />
           <div className="flex-1 space-y-2">
             <div className="skeleton h-3.5 rounded w-1/3" style={{ animationDelay: `${i * 0.1}s` }} />

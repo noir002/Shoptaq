@@ -28,15 +28,14 @@ const Modal = ({ isOpen, onClose, title, children, size = 'md' }) => {
     <div
       ref={overlayRef}
       className="fixed inset-0 z-[100] flex items-center justify-center p-4 modal-overlay"
-      style={{ background: 'rgba(0,0,0,0.7)', backdropFilter: 'blur(4px)' }}
       onClick={(e) => { if (e.target === overlayRef.current) onClose(); }}
     >
       <div className={`w-full ${sizeClasses[size]} card modal-content`}>
-        <div className="flex items-center justify-between px-6 py-4 border-b border-white/5">
-          <h3 className="text-white font-bold text-lg">{title}</h3>
+        <div className="flex items-center justify-between px-6 py-4 border-b border-outline/50">
+          <h3 className="text-on-surface font-bold text-lg">{title}</h3>
           <button
             onClick={onClose}
-            className="w-8 h-8 rounded-lg bg-white/5 hover:bg-white/10 flex items-center justify-center text-white/50 hover:text-white transition-all"
+            className="w-8 h-8 rounded-lg bg-surface-raised hover:bg-surface-muted flex items-center justify-center text-on-surface-variant hover:text-primary transition-all shadow-neo-sm"
           >
             <RiCloseLine size={18} />
           </button>

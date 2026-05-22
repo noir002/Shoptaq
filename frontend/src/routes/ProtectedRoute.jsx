@@ -6,10 +6,10 @@ const ProtectedRoute = () => {
 
   if (loading) {
     return (
-      <div className="flex items-center justify-center h-screen bg-dark-900">
-        <div className="flex flex-col items-center gap-4">
+      <div className="flex items-center justify-center h-screen tech-bg">
+        <div className="flex flex-col items-center gap-4 neo-panel p-8">
           <div className="w-10 h-10 spinner" />
-          <p className="text-white/40 text-sm">Loading Sage AI...</p>
+          <p className="text-on-surface-variant text-sm font-label-md">Loading Shoptaq...</p>
         </div>
       </div>
     );

@@ -36,17 +36,11 @@ const Sidebar = ({ collapsed, setCollapsed }) => {
           <RiStore2Line className="text-primary text-xl" />
         </div>
         {!collapsed && (
-<<<<<<< HEAD
-          <div className="animate-fade-in overflow-hidden">
-            <h1 className="text-white font-bold text-base leading-none tracking-tight">Shoptaq</h1>
-            <span className="text-secondary text-xs font-semibold uppercase tracking-wider font-label-sm">AI Command</span>
-=======
           <div className="animate-fade-in overflow-hidden min-w-0">
             <h1 className="text-on-surface font-bold text-sm leading-tight tracking-tight truncate">{BRAND.name}</h1>
             <span className="text-on-surface-variant text-[10px] font-medium uppercase tracking-wider font-label-sm block truncate">
               {BRAND.tagline}
             </span>
->>>>>>> 9f55e72
           </div>
         )}
         <button

@@ -13,9 +13,6 @@ const crumbs = {
 const Navbar = () => {
   const { pathname } = useLocation();
   const { user } = useAuth();
-<<<<<<< HEAD
-  const pageInfo = pageTitles[pathname] || { title: 'Shoptaq', subtitle: '' };
-=======
   const trail = crumbs[pathname] || [BRAND.name];
 
   const now = new Date();
@@ -24,7 +21,6 @@ const Navbar = () => {
     month: 'short',
     day: 'numeric',
   });
->>>>>>> 9f55e72
 
   return (
     <header className="h-[72px] flex items-center justify-between px-6 lg:px-8 border-b border-outline/50 bg-surface-container/95 backdrop-blur-md z-20">

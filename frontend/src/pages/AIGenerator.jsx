@@ -84,7 +84,7 @@ const colorMap = {
   primary: { icon: 'text-primary-fixed-dim', bg: 'bg-primary-container/10', border: 'border-primary-container/20', active: 'border-primary/40 bg-primary-container/10' },
   green: { icon: 'text-secondary', bg: 'bg-secondary/10', border: 'border-secondary/20', active: 'border-secondary/40 bg-secondary/10' },
   amber: { icon: 'text-amber-600', bg: 'bg-amber-50', border: 'border-amber-200', active: 'border-amber-300 bg-amber-50' },
-  blue: { icon: 'text-indigo-600', bg: 'bg-indigo-50', border: 'border-indigo-200', active: 'border-indigo-300 bg-indigo-50' },
+  blue: { icon: 'text-orange-700', bg: 'bg-orange-50', border: 'border-orange-200', active: 'border-orange-300 bg-orange-50' },
   red: { icon: 'text-red-600', bg: 'bg-red-50', border: 'border-red-200', active: 'border-red-300 bg-red-50' },
 };
 

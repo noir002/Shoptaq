@@ -12,7 +12,7 @@ import { chartColors, chartTooltip, chartScales } from '../utils/chartTheme';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, BarElement, ArcElement, Title, Tooltip, Legend, Filler);
 
-const SEGMENT_COLORS = [chartColors.primary, chartColors.secondary, '#818cf8', '#f59e0b', '#f472b6'];
+const SEGMENT_COLORS = [chartColors.primary, chartColors.secondary, '#fb923c', '#fdba74', '#ea580c'];
 
 const chartOptions = (yCallback) => ({
   responsive: true,
@@ -77,8 +77,8 @@ const Analytics = () => {
       borderColor: chartColors.primary,
       backgroundColor: (ctx) => {
         const g = ctx.chart.ctx.createLinearGradient(0, 0, 0, 280);
-        g.addColorStop(0, 'rgba(99, 102, 241, 0.2)');
-        g.addColorStop(1, 'rgba(99, 102, 241, 0)');
+        g.addColorStop(0, 'rgba(249, 115, 22, 0.22)');
+        g.addColorStop(1, 'rgba(249, 115, 22, 0)');
         return g;
       },
       fill: true, tension: 0.4, pointBackgroundColor: chartColors.primary, pointRadius: 4,
@@ -88,8 +88,8 @@ const Analytics = () => {
   const ordersData = {
     labels: monthly.map((d) => d.month),
     datasets: [
-      { label: 'Transactions', data: monthly.map((d) => d.orders), backgroundColor: 'rgba(8, 145, 178, 0.35)', borderColor: chartColors.secondary, borderWidth: 2, borderRadius: 5 },
-      { label: 'Units fulfilled', data: monthly.map((d) => d.units), backgroundColor: 'rgba(99, 102, 241, 0.3)', borderColor: chartColors.primary, borderWidth: 2, borderRadius: 5 },
+      { label: 'Transactions', data: monthly.map((d) => d.orders), backgroundColor: 'rgba(245, 158, 11, 0.35)', borderColor: chartColors.secondary, borderWidth: 2, borderRadius: 5 },
+      { label: 'Units fulfilled', data: monthly.map((d) => d.units), backgroundColor: 'rgba(249, 115, 22, 0.28)', borderColor: chartColors.primary, borderWidth: 2, borderRadius: 5 },
     ],
   };
 
@@ -112,8 +112,8 @@ const Analytics = () => {
       borderColor: chartColors.secondary,
       backgroundColor: (ctx) => {
         const g = ctx.chart.ctx.createLinearGradient(0, 0, 0, 200);
-        g.addColorStop(0, 'rgba(8, 145, 178, 0.25)');
-        g.addColorStop(1, 'rgba(8, 145, 178, 0)');
+        g.addColorStop(0, 'rgba(245, 158, 11, 0.28)');
+        g.addColorStop(1, 'rgba(245, 158, 11, 0)');
         return g;
       },
       fill: true, tension: 0.4, pointBackgroundColor: chartColors.secondary, pointRadius: 4,
@@ -138,7 +138,7 @@ const Analytics = () => {
           {[
             { label: 'Net sales', value: `$${overview.totalRevenue?.toLocaleString('en', { minimumFractionDigits: 2 })}`, accent: 'border-l-primary' },
             { label: 'Transactions', value: overview.totalOrders?.toLocaleString(), accent: 'border-l-secondary' },
-            { label: 'Catalog size', value: overview.totalProducts?.toLocaleString(), accent: 'border-l-indigo-500' },
+            { label: 'Catalog size', value: overview.totalProducts?.toLocaleString(), accent: 'border-l-primary' },
             { label: 'Avg. transaction', value: `$${overview.avgOrderValue?.toFixed(2)}`, accent: 'border-l-amber-500' },
           ].map(({ label, value, accent }) => (
             <div key={label} className={`card p-5 border-l-4 ${accent}`}>

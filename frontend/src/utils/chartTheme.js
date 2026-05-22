@@ -1,14 +1,14 @@
-/** Shared Chart.js theme for light neomorphic UI */
+/** Shared Chart.js theme — white & orange */
 export const chartColors = {
-  primary: '#6366f1',
-  secondary: '#0891b2',
-  primaryFill: 'rgba(99, 102, 241, 0.25)',
-  secondaryFill: 'rgba(8, 145, 178, 0.3)',
+  primary: '#f97316',
+  secondary: '#f59e0b',
+  primaryFill: 'rgba(249, 115, 22, 0.22)',
+  secondaryFill: 'rgba(245, 158, 11, 0.35)',
 };
 
 export const chartTooltip = {
-  backgroundColor: '#f8fafc',
-  borderColor: '#d8e2ee',
+  backgroundColor: '#fffbf7',
+  borderColor: '#fde8d4',
   borderWidth: 1,
   titleColor: '#1e293b',
   bodyColor: '#64748b',
@@ -17,12 +17,12 @@ export const chartTooltip = {
 
 export const chartScales = {
   x: {
-    grid: { color: 'rgba(100, 116, 139, 0.12)' },
+    grid: { color: 'rgba(249, 115, 22, 0.08)' },
     ticks: { color: '#64748b', font: { size: 11 } },
     border: { display: false },
   },
   y: {
-    grid: { color: 'rgba(100, 116, 139, 0.12)' },
+    grid: { color: 'rgba(249, 115, 22, 0.08)' },
     ticks: { color: '#64748b', font: { size: 11 } },
     border: { display: false },
   },

@@ -80,11 +80,7 @@ const seed = async () => {
     console.log('Cleared existing data');
 
     const admin = await User.create({
-<<<<<<< HEAD
-      name: 'Admin User',
-=======
       name: 'Operations Lead',
->>>>>>> 9f55e72
       email: 'admin@shoptaq.com',
       password: 'password123',
       role: 'admin',
@@ -98,17 +94,9 @@ const seed = async () => {
     await Sale.insertMany(salesData);
     console.log(`Created ${salesData.length} transaction records`);
 
-<<<<<<< HEAD
-    console.log('\n✅ Database seeded successfully!');
-    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-    console.log('📧 Admin Email:    admin@shoptaq.com');
-    console.log('🔑 Admin Password: password123');
-    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n');
-=======
     console.log('\nDatabase seeded successfully');
     console.log('Admin Email:    admin@shoptaq.com');
     console.log('Admin Password: password123\n');
->>>>>>> 9f55e72
 
     process.exit(0);
   } catch (error) {

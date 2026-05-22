@@ -4,8 +4,8 @@
   <path d="m15.5 8.5 3 3" stroke="url(#logo-grad)"/>
   <defs>
     <linearGradient id="logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#A855F7"/>
-      <stop offset="1" stop-color="#3B82F6"/>
+      <stop stop-color="#fb923c"/>
+      <stop offset="1" stop-color="#ea580c"/>
     </linearGradient>
   </defs>
 </svg>

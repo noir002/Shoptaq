@@ -57,13 +57,8 @@ const Signup = () => {
           <div className="w-16 h-16 rounded-2xl bg-surface-raised border border-outline/50 flex items-center justify-center mb-8 shadow-neo">
             <RiStore2Line className="text-primary text-3xl" />
           </div>
-<<<<<<< HEAD
-          <h2 className="text-4xl font-extrabold text-white mb-4 leading-tight tracking-tight">
-            Join <span className="gradient-text font-black">Shoptaq</span>
-=======
           <h2 className="text-4xl font-extrabold text-on-surface leading-tight mb-4">
             Launch your <span className="gradient-text">{BRAND.name}</span> workspace
->>>>>>> 9f55e72
           </h2>
           <p className="text-on-surface-variant text-base leading-relaxed mb-8">
             Onboard in minutes and start managing inventory, insights, and merchandising from a single platform.
@@ -80,28 +75,14 @@ const Signup = () => {
       </div>
 
       <div className="flex-1 flex items-center justify-center p-6 z-10">
-<<<<<<< HEAD
-        <div className="w-full max-w-md animate-fade-in glass-panel p-8 md:p-10 border border-white/10 rounded-2xl relative shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-          <div className="noise-overlay" />
-          <div className="relative z-10">
-            <div className="mb-8">
-              <div className="flex items-center gap-3 mb-6 lg:hidden">
-                <div className="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center border border-white/10">
-                  <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-1.66-.45-3.22-1.22-4.57" stroke="url(#mob-signup-grad)"/>
-                    <path d="m15.5 5.5 3-3" stroke="url(#mob-signup-grad)"/>
-                    <path d="m15.5 8.5 3 3" stroke="url(#mob-signup-grad)"/>
-                    <defs>
-                      <linearGradient id="mob-signup-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#A855F7"/>
-                        <stop offset="1" stopColor="#3B82F6"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-                <span className="text-white font-bold text-lg tracking-tight">Shoptaq</span>
-=======
         <div className="w-full max-w-md animate-fade-in card p-8 md:p-10">
+          <div className="lg:hidden flex items-center gap-3 mb-8">
+            <div className="w-10 h-10 rounded-xl bg-surface-raised border border-outline/50 flex items-center justify-center">
+              <RiStore2Line className="text-primary text-xl" />
+            </div>
+            <span className="text-on-surface font-bold text-lg">{BRAND.name}</span>
+          </div>
+
           <h1 className="text-2xl font-bold text-on-surface mb-1">Create account</h1>
           <p className="text-on-surface-variant text-sm mb-8">Set up your operator profile for {BRAND.name}</p>
 
@@ -111,7 +92,6 @@ const Signup = () => {
               <div className="relative">
                 <RiUserLine className="absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant" />
                 <input id="signup-name" type="text" value={form.name} onChange={update('name')} className="input pl-11" placeholder="Alex Morgan" />
->>>>>>> 9f55e72
               </div>
             </div>
 

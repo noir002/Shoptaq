@@ -7,7 +7,7 @@ import { chartTooltip } from '../../utils/chartTheme';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const COLORS = ['#6366f1', '#0891b2', '#818cf8', '#f59e0b', '#f472b6'];
+const COLORS = ['#f97316', '#fb923c', '#f59e0b', '#fdba74', '#ea580c'];
 
 const TopProductsChart = ({ data = [], loading = false }) => {
   if (loading) {

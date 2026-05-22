@@ -9,11 +9,7 @@ const ProtectedRoute = () => {
       <div className="flex items-center justify-center h-screen tech-bg">
         <div className="flex flex-col items-center gap-4 neo-panel p-8">
           <div className="w-10 h-10 spinner" />
-<<<<<<< HEAD
-          <p className="text-white/40 text-sm">Loading Shoptaq...</p>
-=======
           <p className="text-on-surface-variant text-sm font-label-md">Loading Shoptaq...</p>
->>>>>>> 9f55e72
         </div>
       </div>
     );

@@ -30,8 +30,8 @@ const RevenueChart = ({ data = [], loading = false }) => {
         borderColor: chartColors.primary,
         backgroundColor: (ctx) => {
           const gradient = ctx.chart.ctx.createLinearGradient(0, 0, 0, 300);
-          gradient.addColorStop(0, 'rgba(99, 102, 241, 0.2)');
-          gradient.addColorStop(1, 'rgba(99, 102, 241, 0)');
+          gradient.addColorStop(0, 'rgba(249, 115, 22, 0.25)');
+          gradient.addColorStop(1, 'rgba(249, 115, 22, 0)');
           return gradient;
         },
         fill: true,

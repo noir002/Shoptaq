@@ -48,14 +48,9 @@ const Login = () => {
           <div className="w-16 h-16 rounded-2xl bg-surface-raised border border-outline/50 flex items-center justify-center mb-8 shadow-neo">
             <RiStore2Line className="text-primary text-3xl" />
           </div>
-<<<<<<< HEAD
-          <h2 className="text-4xl font-extrabold text-white mb-4 leading-tight tracking-tight">
-            <span className="gradient-text font-black">Shoptaq</span>
-=======
           <p className="text-secondary text-xs font-semibold uppercase tracking-widest mb-3">{BRAND.tagline}</p>
           <h2 className="text-4xl font-extrabold text-on-surface leading-tight tracking-tight mb-4">
             Operate your retail business with <span className="gradient-text">confidence</span>
->>>>>>> 9f55e72
           </h2>
           <p className="text-on-surface-variant text-base leading-relaxed">
             {BRAND.name} unifies catalog management, fulfillment analytics, and AI merchandising in one professional workspace.
@@ -76,27 +71,6 @@ const Login = () => {
       </div>
 
       <div className="flex-1 flex items-center justify-center p-6 z-10">
-<<<<<<< HEAD
-        <div className="w-full max-w-md animate-fade-in glass-panel p-8 md:p-10 border border-white/10 rounded-2xl relative shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
-          <div className="noise-overlay" />
-          <div className="relative z-10">
-            <div className="mb-8">
-              <div className="flex items-center gap-3 mb-6 lg:hidden">
-                <div className="w-10 h-10 rounded-xl bg-surface-container flex items-center justify-center border border-white/10">
-                  <svg className="w-7 h-7" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-1.66-.45-3.22-1.22-4.57" stroke="url(#mob-logo-grad)"/>
-                    <path d="m15.5 5.5 3-3" stroke="url(#mob-logo-grad)"/>
-                    <path d="m15.5 8.5 3 3" stroke="url(#mob-logo-grad)"/>
-                    <defs>
-                      <linearGradient id="mob-logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#A855F7"/>
-                        <stop offset="1" stopColor="#3B82F6"/>
-                      </linearGradient>
-                    </defs>
-                  </svg>
-                </div>
-                <span className="text-white font-bold text-lg tracking-tight">Shoptaq</span>
-=======
         <div className="w-full max-w-md animate-fade-in card p-8 md:p-10">
           <div className="lg:hidden flex items-center gap-3 mb-8">
             <div className="w-10 h-10 rounded-xl bg-surface-raised border border-outline/50 flex items-center justify-center">
@@ -122,27 +96,9 @@ const Login = () => {
                   placeholder="operator@company.com"
                   autoComplete="email"
                 />
->>>>>>> 9f55e72
               </div>
             </div>
 
-<<<<<<< HEAD
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div>
-                <label className="block text-white/60 text-xs font-semibold uppercase tracking-wider font-label-sm mb-2">Email address</label>
-                <div className="relative">
-                  <RiMailLine className="absolute left-4 top-1/2 -translate-y-1/2 text-white/30 text-lg" />
-                  <input
-                    id="login-email"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="input pl-11"
-                    placeholder="admin@shoptaq.com"
-                    autoComplete="email"
-                  />
-                </div>
-=======
             <div>
               <label className="block text-on-surface-variant text-xs font-semibold uppercase tracking-wider mb-2">Password</label>
               <div className="relative">
@@ -159,7 +115,6 @@ const Login = () => {
                 <button type="button" onClick={() => setShowPass(!showPass)} className="absolute right-4 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-primary">
                   {showPass ? <RiEyeOffLine /> : <RiEyeLine />}
                 </button>
->>>>>>> 9f55e72
               </div>
             </div>
 

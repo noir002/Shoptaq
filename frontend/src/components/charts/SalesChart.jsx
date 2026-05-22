@@ -31,7 +31,7 @@ const SalesChart = ({ data = [], loading = false }) => {
         borderWidth: 2,
         borderRadius: 6,
         borderSkipped: false,
-        hoverBackgroundColor: 'rgba(8, 145, 178, 0.45)',
+        hoverBackgroundColor: 'rgba(245, 158, 11, 0.45)',
       },
       {
         label: 'Units fulfilled',
@@ -41,7 +41,7 @@ const SalesChart = ({ data = [], loading = false }) => {
         borderWidth: 2,
         borderRadius: 6,
         borderSkipped: false,
-        hoverBackgroundColor: 'rgba(99, 102, 241, 0.45)',
+        hoverBackgroundColor: 'rgba(249, 115, 22, 0.45)',
       },
     ],
   };

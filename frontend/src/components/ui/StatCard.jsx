@@ -6,7 +6,7 @@ const StatCard = ({ title, value, delta, deltaLabel, icon: Icon, color = 'primar
     green: { accent: 'bg-secondary', iconBg: 'bg-secondary/10', iconText: 'text-secondary', border: 'border-secondary/20' },
     amber: { accent: 'bg-amber-500', iconBg: 'bg-amber-50', iconText: 'text-amber-600', border: 'border-amber-200' },
     red: { accent: 'bg-error', iconBg: 'bg-error/10', iconText: 'text-error', border: 'border-error/20' },
-    blue: { accent: 'bg-accent', iconBg: 'bg-indigo-50', iconText: 'text-indigo-600', border: 'border-indigo-200' },
+    blue: { accent: 'bg-primary', iconBg: 'bg-orange-50', iconText: 'text-orange-700', border: 'border-orange-200' },
   };
 
   const c = colorMap[color] || colorMap.primary;

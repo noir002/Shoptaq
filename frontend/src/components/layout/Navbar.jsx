@@ -1,41 +1,77 @@
-import { useLocation } from 'react-router-dom';
-import { RiBellLine } from 'react-icons/ri';
+import { useLocation, Link } from 'react-router-dom';
+import { RiBellLine, RiSearchLine, RiPulseLine } from 'react-icons/ri';
 import { useAuth } from '../../context/AuthContext';
+import { BRAND } from '../../constants/catalog';
 
-const pageTitles = {
-  '/dashboard': { title: 'Dashboard', subtitle: 'Real-time overview of your store\'s operations and metrics.' },
-  '/products': { title: 'Products', subtitle: 'Manage your product inventory, details, and AI optimizations.' },
-  '/analytics': { title: 'Analytics', subtitle: 'Detailed breakdowns of revenue, sales, and category statistics.' },
-  '/ai': { title: 'AI Command Center', subtitle: 'Leverage Google Gemini to generate copy, pricing recommendations, and trends.' },
+const crumbs = {
+  '/dashboard': ['Operations', 'Hub'],
+  '/products': ['Catalog', 'SKU Inventory'],
+  '/analytics': ['Intelligence', 'Business Insights'],
+  '/ai': ['Merchandising', 'AI Studio'],
 };
 
 const Navbar = () => {
   const { pathname } = useLocation();
   const { user } = useAuth();
+<<<<<<< HEAD
   const pageInfo = pageTitles[pathname] || { title: 'Shoptaq', subtitle: '' };
+=======
+  const trail = crumbs[pathname] || [BRAND.name];
+
+  const now = new Date();
+  const dateLabel = now.toLocaleDateString('en-US', {
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric',
+  });
+>>>>>>> 9f55e72
 
   return (
-    <header className="h-20 flex items-center justify-between px-8 border-b border-white/10 bg-surface-container-low/40 backdrop-blur-xl z-20">
-      <div>
-        <h2 className="text-white font-bold text-xl leading-tight font-headline-md tracking-tight">{pageInfo.title}</h2>
-        <p className="text-on-surface-variant text-xs mt-0.5 font-body-md">{pageInfo.subtitle}</p>
+    <header className="h-[72px] flex items-center justify-between px-6 lg:px-8 border-b border-outline/50 bg-surface-container/95 backdrop-blur-md z-20">
+      <div className="flex items-center gap-4 min-w-0">
+        <nav className="flex items-center gap-1.5 text-xs font-label-sm text-on-surface-variant min-w-0">
+          <Link to="/dashboard" className="hover:text-primary transition-colors shrink-0">
+            {BRAND.name}
+          </Link>
+          {trail.map((part, i) => (
+            <span key={part} className="flex items-center gap-1.5 min-w-0">
+              <span className="text-outline">/</span>
+              <span className={i === trail.length - 1 ? 'text-on-surface font-semibold truncate' : 'truncate'}>
+                {part}
+              </span>
+            </span>
+          ))}
+        </nav>
+        <span className="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-secondary/10 border border-secondary/20 text-secondary text-[10px] font-semibold uppercase tracking-wider">
+          <RiPulseLine className="text-xs" />
+          Synced
+        </span>
       </div>
 
-      <div className="flex items-center gap-4">
-        {/* Notification bell */}
-        <button className="relative w-10 h-10 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex items-center justify-center text-white/50 hover:text-white transition-all">
-          <RiBellLine size={18} />
-          <span className="absolute top-2 right-2 w-2 h-2 bg-secondary rounded-full ring-2 ring-background animate-pulse" />
+      <div className="flex items-center gap-3">
+        <div className="hidden md:flex items-center gap-2 h-9 px-3 rounded-xl bg-surface-muted/50 border border-outline/50 min-w-[200px]">
+          <RiSearchLine className="text-on-surface-variant text-sm" />
+          <span className="text-on-surface-variant text-xs">Search catalog, orders…</span>
+        </div>
+
+        <span className="hidden sm:block text-on-surface-variant text-xs font-label-sm">{dateLabel}</span>
+
+        <button
+          type="button"
+          className="relative w-9 h-9 rounded-xl bg-surface-raised border border-outline/50 flex items-center justify-center text-on-surface-variant hover:text-primary transition-all shadow-neo-sm"
+          aria-label="Notifications"
+        >
+          <RiBellLine size={17} />
+          <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-secondary rounded-full ring-2 ring-surface-container" />
         </button>
 
-        {/* Avatar */}
-        <div className="flex items-center gap-3 pl-4 border-l border-white/10">
-          <div className="w-9 h-9 rounded-full bg-gradient-to-br from-primary-container to-secondary flex items-center justify-center text-on-primary-container font-bold text-sm shadow-glow">
+        <div className="flex items-center gap-2.5 pl-3 border-l border-outline/50">
+          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white font-bold text-xs">
             {user?.name?.[0]?.toUpperCase()}
           </div>
-          <div className="hidden sm:block overflow-hidden max-w-[120px]">
-            <p className="text-white text-sm font-semibold leading-none truncate">{user?.name}</p>
-            <p className="text-white/40 text-[10px] mt-1 font-label-sm truncate">{user?.email}</p>
+          <div className="hidden sm:block max-w-[140px]">
+            <p className="text-on-surface text-xs font-semibold leading-none truncate">{user?.name}</p>
+            <p className="text-on-surface-variant text-[10px] mt-1 truncate">{user?.email}</p>
           </div>
         </div>
       </div>

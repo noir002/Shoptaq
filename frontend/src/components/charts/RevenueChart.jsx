@@ -4,6 +4,7 @@ import {
   Title, Tooltip, Legend, Filler
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+import { chartColors, chartTooltip, chartScales } from '../../utils/chartTheme';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend, Filler);
 
@@ -26,16 +27,16 @@ const RevenueChart = ({ data = [], loading = false }) => {
       {
         label: 'Revenue',
         data: revenues,
-        borderColor: '#a078ff',
+        borderColor: chartColors.primary,
         backgroundColor: (ctx) => {
           const gradient = ctx.chart.ctx.createLinearGradient(0, 0, 0, 300);
-          gradient.addColorStop(0, 'rgba(160,120,255,0.3)');
-          gradient.addColorStop(1, 'rgba(160,120,255,0)');
+          gradient.addColorStop(0, 'rgba(99, 102, 241, 0.2)');
+          gradient.addColorStop(1, 'rgba(99, 102, 241, 0)');
           return gradient;
         },
         fill: true,
         tension: 0.4,
-        pointBackgroundColor: '#a078ff',
+        pointBackgroundColor: chartColors.primary,
         pointBorderColor: '#fff',
         pointBorderWidth: 2,
         pointRadius: 4,
@@ -50,31 +51,20 @@ const RevenueChart = ({ data = [], loading = false }) => {
     plugins: {
       legend: { display: false },
       tooltip: {
-        backgroundColor: '#171f33',
-        borderColor: 'rgba(160,120,255,0.3)',
-        borderWidth: 1,
-        titleColor: '#fff',
-        bodyColor: 'rgba(255,255,255,0.7)',
-        padding: 12,
+        ...chartTooltip,
         callbacks: {
           label: (ctx) => ` $${ctx.parsed.y.toLocaleString()}`,
         },
       },
     },
     scales: {
-      x: {
-        grid: { color: 'rgba(255,255,255,0.05)' },
-        ticks: { color: 'rgba(255,255,255,0.4)', font: { size: 11 } },
-        border: { display: false },
-      },
+      x: chartScales.x,
       y: {
-        grid: { color: 'rgba(255,255,255,0.05)' },
+        ...chartScales.y,
         ticks: {
-          color: 'rgba(255,255,255,0.4)',
-          font: { size: 11 },
+          ...chartScales.y.ticks,
           callback: (v) => `$${(v / 1000).toFixed(0)}k`,
         },
-        border: { display: false },
       },
     },
     interaction: { intersect: false, mode: 'index' },
@@ -82,15 +72,14 @@ const RevenueChart = ({ data = [], loading = false }) => {
 
   return (
     <div className="card p-6 animate-fade-in">
-      <div className="flex items-center justify-between mb-6">
+      <div className="flex items-center justify-between mb-5 px-1">
         <div>
-          <h3 className="text-white font-bold text-base">Revenue Overview</h3>
-          <p className="text-white/40 text-xs mt-0.5">Last 12 months</p>
+          <h3 className="text-on-surface font-semibold text-sm">Net sales trend</h3>
+          <p className="text-on-surface-variant text-xs mt-0.5">Trailing twelve months · USD</p>
         </div>
-        <div className="flex items-center gap-2">
-          <div className="w-2 h-2 rounded-full bg-primary-500" />
-          <span className="text-white/40 text-xs">Monthly revenue</span>
-        </div>
+        <span className="text-[10px] font-semibold uppercase tracking-wider text-primary bg-primary-container/10 border border-primary-container/20 px-2 py-1 rounded-md">
+          Live
+        </span>
       </div>
       <div style={{ height: '220px' }}>
         <Line data={chartData} options={options} />

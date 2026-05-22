@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 # Shoptaq 🚀
+=======
+# Shoptaq AI 🚀
+>>>>>>> 9f55e72
 
-> An AI-powered ecommerce admin dashboard built with React, Node.js, MongoDB, and Google Gemini.
+> An AI-powered ecommerce admin dashboard built with React.js, Node.js, MongoDB and Google Gemini API.
 
 ![Tech Stack](https://img.shields.io/badge/React-18-blue) ![Node](https://img.shields.io/badge/Node.js-20-green) ![MongoDB](https://img.shields.io/badge/MongoDB-8-green) ![Tailwind](https://img.shields.io/badge/Tailwind-3-cyan)
 

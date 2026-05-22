@@ -46,7 +46,7 @@ const generateDescription = async (req, res) => {
     const client = getGeminiClient();
     if (!client) {
       return res.json({
-        description: `Introducing the ${title} — a premium ${category} product designed for those who demand quality and performance. Crafted with precision and built to last, this product combines cutting-edge technology with elegant design. Whether you're a seasoned professional or just starting out, ${title} delivers exceptional value at every turn.\n\nExperience the difference that quality makes. Shop now and elevate your everyday experience.`,
+        description: `The ${title} represents a considered addition to our ${category} assortment — engineered for discerning buyers who expect reliability, clarity of purpose, and lasting value. From materials selection through final inspection, every detail supports a premium retail experience.\n\nIdeal for both first-time purchasers and repeat clients, this listing balances performance with approachable pricing. Add ${title} to your cart today and experience the standard your customers expect.`,
         mock: true,
       });
     }
@@ -122,9 +122,9 @@ const generateCaption = async (req, res) => {
     if (!client) {
       return res.json({
         captions: {
-          instagram: `✨ Introducing ${title}! The ${category} upgrade you've been waiting for. 🛒 Shop now! #${category.replace(/\s+/g, '')} #NewArrival #ShopNow`,
-          twitter: `🚀 Just dropped: ${title} — the ${category} that changes everything. Limited stock. Don't miss out! 👉`,
-          facebook: `We're excited to introduce ${title}! ${price ? `Starting at just $${price}, ` : ''}this is the deal you've been waiting for. Click to grab yours today!`,
+          instagram: `Now live: ${title}. A standout in ${category} — refined design, proven quality. ${price ? `From $${price}. ` : ''}Shop the collection · Link in bio.`,
+          twitter: `New arrival — ${title}. Built for the ${category} buyer who values substance over hype. ${price ? `$${price} · ` : ''}Limited initial allocation.`,
+          facebook: `We're pleased to add ${title} to our ${category} lineup. ${price ? `Retail price $${price}. ` : ''}Read the full specifications and order online today.`,
         },
         mock: true,
       });
@@ -166,7 +166,7 @@ const recommendPrice = async (req, res) => {
           minPrice: Number(min),
           maxPrice: Number(max),
           optimalPrice: Number(optimal),
-          reasoning: `Based on current market trends for ${category} products, a slight price increase of 5% is recommended. Your current pricing is competitive but there's room to optimize margins while staying attractive to buyers.`,
+          reasoning: `Comparable ${category} listings suggest modest upside without sacrificing conversion. A 5% adjustment aligns with category benchmarks while preserving perceived value for ${title}.`,
           suggestSale: stock > 50,
           discountPercent: stock > 50 ? 15 : 0,
         },
@@ -204,11 +204,11 @@ const getTrending = async (req, res) => {
     if (!client) {
       return res.json({
         suggestions: [
-          { name: `Smart ${category} Pro`, reason: 'AI-integrated features driving massive demand in 2025', priceRange: '$49-$199', targetAudience: 'Tech-savvy millennials' },
-          { name: `Eco ${category} Bundle`, reason: 'Sustainability trend dominates consumer choices', priceRange: '$29-$89', targetAudience: 'Eco-conscious buyers 25-40' },
-          { name: `${category} Starter Kit`, reason: 'Beginners market expanding rapidly with how-to content', priceRange: '$19-$59', targetAudience: 'Beginners and students' },
-          { name: `Premium ${category} Set`, reason: 'Luxury positioning seeing 40% YoY growth', priceRange: '$99-$299', targetAudience: 'Affluent professionals 30-55' },
-          { name: `Mini ${category} Edition`, reason: 'Compact and portable products trending across all categories', priceRange: '$15-$49', targetAudience: 'Mobile-first Gen Z shoppers' },
+          { name: `${category} Essentials Bundle`, reason: 'Curated starter sets reduce decision friction and lift average order value', priceRange: '$45–$120', targetAudience: 'First-time category buyers' },
+          { name: `Refill & Subscribe ${category}`, reason: 'Replenishment models show strong retention in consumable adjacencies', priceRange: '$28–$65/mo', targetAudience: 'Household replenishment shoppers' },
+          { name: `Pro-Series ${category}`, reason: 'Trade-up tier captures margin from enthusiasts willing to pay for specs', priceRange: '$150–$340', targetAudience: 'Serious hobbyists & professionals' },
+          { name: `Limited ${category} Collaboration`, reason: 'Scarcity drops drive urgency and social sharing in seasonal windows', priceRange: '$75–$220', targetAudience: 'Brand-loyal collectors' },
+          { name: `Compact ${category} Travel Line`, reason: 'Portable formats outperform in urban and commuter segments', priceRange: '$35–$95', targetAudience: 'Urban professionals 28–45' },
         ],
         mock: true,
       });

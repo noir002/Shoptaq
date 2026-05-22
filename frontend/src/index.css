@@ -17,8 +17,13 @@
 
   body {
     font-family: 'Geist', 'Inter', system-ui, sans-serif;
+<<<<<<< HEAD
     background-color: #121829;
     color: #e2e8f0;
+=======
+    background-color: #e4eaf3;
+    color: #1e293b;
+>>>>>>> 9f55e72
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -29,6 +34,7 @@
   }
 
   ::-webkit-scrollbar-track {
+<<<<<<< HEAD
     background: #0d111d;
   }
 
@@ -40,16 +46,37 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: #4f46e5;
+=======
+    background: #dce4ef;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #6366f1;
+>>>>>>> 9f55e72
   }
 }
 
 @layer components {
+<<<<<<< HEAD
   /* Premium Dark Neomorphic Card */
   .card, .glass-panel {
     background: #121829;
     box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.45), -8px -8px 24px rgba(255, 255, 255, 0.025);
     border: 1px solid rgba(255, 255, 255, 0.015);
     border-radius: 1.25rem;
+=======
+  /* Neomorphic surfaces */
+  .card {
+    background: #f0f4fa;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 1rem;
+    box-shadow: 8px 8px 20px #c5d0de, -6px -6px 18px #ffffff;
+>>>>>>> 9f55e72
     position: relative;
     z-index: 10;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -58,6 +85,7 @@
   .card-hover {
     @apply card;
   }
+<<<<<<< HEAD
   
   .card-hover:hover, .glass-panel:hover {
     background: #121829;
@@ -80,12 +108,47 @@
     background: #121829;
     box-shadow: 8px 8px 24px rgba(0, 0, 0, 0.45), -8px -8px 24px rgba(255, 255, 255, 0.025);
     border-radius: 1.25rem;
-    z-index: 1;
+=======
+
+  .card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 10px 12px 28px #b8c5d8, -6px -6px 20px #ffffff,
+      0 0 0 1px rgba(99, 102, 241, 0.1);
   }
-  
+
+  .glass-panel,
+  .neo-panel {
+    background: linear-gradient(145deg, #f5f8fc 0%, #eef3f9 100%);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 1rem;
+    box-shadow: 8px 8px 20px #c5d0de, -6px -6px 18px #ffffff;
+  }
+
+  .glass-panel:hover,
+  .neo-panel:hover {
+    box-shadow: 10px 12px 26px #b8c5d8, -7px -7px 20px #ffffff;
+  }
+
+  .neo-inset {
+    background: #e8eef6;
+    border-radius: 0.75rem;
+    box-shadow: inset 4px 4px 12px #c5d0de, inset -3px -3px 10px #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+  }
+
+  .ai-mesh-border {
+    position: relative;
+    background: linear-gradient(145deg, #f5f8fc, #eef3f9);
+    border-radius: 1rem;
+>>>>>>> 9f55e72
+    z-index: 1;
+    box-shadow: 8px 8px 20px #c5d0de, -6px -6px 18px #ffffff;
+  }
+
   .ai-mesh-border::before {
     content: "";
     position: absolute;
+<<<<<<< HEAD
     inset: -1.5px;
     border-radius: 1.35rem;
     background: linear-gradient(45deg, #a078ff, #4cd7f6, #a078ff);
@@ -93,18 +156,31 @@
     animation: gradientMove 5s ease infinite;
     z-index: -1;
     opacity: 0.65;
+=======
+    inset: -2px;
+    border-radius: 1.1rem;
+    background: linear-gradient(45deg, #6366f1, #22d3ee, #6366f1);
+    background-size: 200% 200%;
+    animation: gradientMove 5s ease infinite;
+    z-index: -1;
+    opacity: 0.55;
+>>>>>>> 9f55e72
   }
 
-  /* Noise Overlay Effect */
   .noise-overlay {
     position: absolute;
     inset: 0;
+<<<<<<< HEAD
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.015'/%3E%3C/svg%3E");
+=======
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+>>>>>>> 9f55e72
     pointer-events: none;
     border-radius: inherit;
     z-index: 1;
   }
 
+<<<<<<< HEAD
   /* Tactile Neomorphic Buttons */
   .btn-primary {
     background: #121829;
@@ -165,14 +241,66 @@
     border: 1px solid rgba(255, 255, 255, 0.02);
     @apply text-white placeholder-white/20 rounded-xl px-4 py-3 
            w-full focus:outline-none focus:border-secondary/40 focus:ring-1 focus:ring-secondary/20
-           transition-all duration-200;
+=======
+  .tech-bg {
+    background-color: #e4eaf3;
+    background-image: linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
   }
 
+  .btn-primary {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    @apply text-white font-semibold px-5 py-2.5 rounded-xl
+           transition-all duration-200 active:scale-95
+           focus:outline-none focus:ring-2 focus:ring-primary/30 hover:brightness-105;
+    box-shadow: 4px 4px 14px rgba(79, 70, 229, 0.35), -2px -2px 8px rgba(255, 255, 255, 0.8);
+  }
+
+  .btn-secondary {
+    background: #eef3f9;
+    @apply text-on-surface font-medium px-4 py-2.5 rounded-xl
+           border border-outline/60 transition-all duration-200 active:scale-95;
+    box-shadow: 4px 4px 12px #c5d0de, -3px -3px 10px #ffffff;
+  }
+
+  .btn-secondary:hover {
+    @apply border-primary/30 text-primary;
+    box-shadow: 6px 6px 16px #c5d0de, -4px -4px 12px #ffffff;
+  }
+
+  .btn-danger {
+    @apply bg-red-50 hover:bg-red-100 text-red-600 font-medium px-4 py-2.5 rounded-xl
+           border border-red-200 hover:border-red-300 transition-all duration-200 active:scale-95;
+    box-shadow: 4px 4px 12px #e2c5c5, -2px -2px 8px #fff;
+  }
+
+  .btn-success {
+    @apply bg-cyan-50 hover:bg-cyan-100 text-cyan-700 font-medium px-4 py-2.5 rounded-xl
+           border border-cyan-200 transition-all duration-200 active:scale-95;
+    box-shadow: 4px 4px 12px #c5d8de, -2px -2px 8px #fff;
+  }
+
+  .input {
+    background: #e8eef6;
+    @apply border border-outline/80 text-on-surface placeholder-on-surface-variant/60 rounded-xl px-4 py-3
+           w-full focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/15
+>>>>>>> 9f55e72
+           transition-all duration-200;
+    box-shadow: inset 3px 3px 8px #c5d0de, inset -2px -2px 6px #ffffff;
+  }
+
+<<<<<<< HEAD
   /* Table styling */
   .table-container {
     background: #121829;
     box-shadow: inset 4px 4px 12px rgba(0, 0, 0, 0.35), inset -4px -4px 12px rgba(255, 255, 255, 0.015);
     @apply overflow-x-auto rounded-2xl border border-white/5 p-2;
+=======
+  .table-container {
+    @apply overflow-x-auto rounded-2xl border border-outline/50;
+    box-shadow: inset 2px 2px 6px rgba(197, 208, 222, 0.4);
+>>>>>>> 9f55e72
   }
 
   .table {
@@ -180,6 +308,7 @@
   }
 
   .table thead {
+<<<<<<< HEAD
     @apply border-b border-white/5;
     background: rgba(0, 0, 0, 0.15);
   }
@@ -187,30 +316,47 @@
   .table th {
     @apply px-4 py-3.5 text-white/40 font-semibold text-xs uppercase tracking-wider;
     font-family: 'JetBrains Mono', 'Courier New', monospace;
+=======
+    @apply border-b border-outline/60;
+    background: #e8eef6;
+  }
+
+  .table th {
+    @apply px-4 py-3.5 text-on-surface-variant font-semibold text-xs uppercase tracking-wider;
+    font-family: 'JetBrains Mono', monospace;
+>>>>>>> 9f55e72
   }
 
   .table td {
-    @apply px-4 py-4 text-white/80 border-b border-white/5;
+    @apply px-4 py-4 text-on-surface border-b border-outline/40;
   }
 
   .table tbody tr {
     @apply transition-colors duration-150;
   }
-  
+
   .table tbody tr:hover {
+<<<<<<< HEAD
     background: rgba(255, 255, 255, 0.02);
+=======
+    background: rgba(99, 102, 241, 0.04);
+>>>>>>> 9f55e72
   }
 
   .table tbody tr:last-child td {
     @apply border-b-0;
   }
 
+<<<<<<< HEAD
   /* Badge system */
+=======
+>>>>>>> 9f55e72
   .badge {
     @apply inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold shadow-sm;
   }
 
   .badge-success {
+<<<<<<< HEAD
     @apply badge text-secondary; 
     background: rgba(76, 213, 246, 0.05);
     border: 1px solid rgba(76, 213, 246, 0.15);
@@ -238,21 +384,47 @@
     @apply badge text-primary-fixed-dim;
     background: rgba(208, 188, 255, 0.05);
     border: 1px solid rgba(208, 188, 255, 0.15);
+=======
+    @apply badge text-cyan-700 bg-cyan-50 border border-cyan-200;
   }
 
-  /* Shimmer skeleton */
+  .badge-warning {
+    @apply badge text-amber-700 bg-amber-50 border border-amber-200;
+  }
+
+  .badge-danger {
+    @apply badge text-red-700 bg-red-50 border border-red-200;
+  }
+
+  .badge-info {
+    @apply badge text-indigo-700 bg-indigo-50 border border-indigo-200;
+  }
+
+  .badge-purple {
+    @apply badge text-violet-700 bg-violet-50 border border-violet-200;
+>>>>>>> 9f55e72
+  }
+
   .skeleton {
-    @apply bg-gradient-to-r from-white/5 via-white/10 to-white/5 animate-shimmer rounded-lg;
+    @apply animate-shimmer rounded-lg;
+    background: linear-gradient(90deg, #e8eef6 0%, #f5f8fc 50%, #e8eef6 100%);
     background-size: 400px 100%;
   }
 
+<<<<<<< HEAD
   /* Sidebar nav item: Inset pressed neomorphic look for active items */
   .nav-item {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
     @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-white/50 font-medium transition-all duration-200 cursor-pointer border border-transparent;
+=======
+  .nav-item {
+    font-family: 'JetBrains Mono', monospace;
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-xl text-on-surface-variant font-medium transition-all duration-200 cursor-pointer;
+>>>>>>> 9f55e72
   }
-  
+
   .nav-item:hover {
+<<<<<<< HEAD
     @apply text-white/90;
     background: rgba(255, 255, 255, 0.02);
   }
@@ -267,24 +439,131 @@
   /* Soft Glass/Glow */
   .glass {
     @apply bg-white/2 backdrop-blur-md border border-white/5;
+=======
+    @apply text-on-surface;
+    background: #e8eef6;
+    box-shadow: inset 2px 2px 6px #c5d0de, inset -2px -2px 5px #ffffff;
   }
 
-  /* Gradient text */
+  .nav-item.active {
+    @apply text-primary font-semibold;
+    background: linear-gradient(145deg, #f5f8fc, #eef3f9);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    box-shadow: 4px 4px 12px #c5d0de, -3px -3px 10px #ffffff, 0 0 0 1px rgba(99, 102, 241, 0.08);
+  }
+
+  .glass {
+    @apply bg-surface-raised border border-white/80;
+    box-shadow: 4px 4px 14px #c5d0de, -3px -3px 12px #ffffff;
+>>>>>>> 9f55e72
+  }
+
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-fixed-dim to-secondary bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary via-accent to-secondary bg-clip-text text-transparent;
+  }
+
+  .page-header {
+    @apply flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 pb-1;
+  }
+
+  .page-header__main {
+    @apply flex flex-col gap-2;
+  }
+
+  .page-header__badge {
+    @apply inline-flex w-fit items-center px-2.5 py-1 rounded-md text-[10px] font-semibold uppercase tracking-widest
+           text-primary bg-primary-container/10 border border-primary-container/25 font-label-sm;
+  }
+
+  .page-header__title {
+    @apply text-on-surface font-bold text-2xl tracking-tight font-headline-md;
+  }
+
+  .page-header__subtitle {
+    @apply text-on-surface-variant text-sm mt-0.5 max-w-2xl font-body-md;
+  }
+
+  .page-header__meta {
+    @apply items-center gap-3 text-on-surface-variant text-xs font-label-sm;
+  }
+
+  .page-header__actions {
+    @apply flex flex-wrap items-center gap-2 flex-shrink-0;
+  }
+
+  .kpi-strip {
+    @apply grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4;
+  }
+
+  .section-panel {
+    @apply card p-0 overflow-hidden;
+  }
+
+  .section-panel__head {
+    @apply flex items-center justify-between px-5 py-4 border-b border-outline/50 bg-surface-container-low/80;
+  }
+
+  .section-panel__body {
+    @apply p-5;
+  }
+
+  .quick-action {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl border border-outline/50 bg-surface-raised
+           hover:border-primary/25 hover:shadow-card-hover transition-all duration-200 text-left;
+  }
+
+  .data-row {
+    @apply flex items-center gap-4 p-3 rounded-xl border border-outline/40 bg-surface-muted/30
+           hover:bg-surface-muted/50 transition-colors;
+  }
+
+  .sku-mono {
+    font-family: 'JetBrains Mono', monospace;
+    @apply text-[11px] text-on-surface-variant tracking-wide;
+  }
+
+  .view-toggle {
+    @apply inline-flex p-1 rounded-xl bg-surface-muted/60 border border-outline/50 shadow-neo-inset;
+  }
+
+  .view-toggle__btn {
+    @apply px-3 py-1.5 rounded-lg text-xs font-semibold text-on-surface-variant transition-all font-label-md;
+  }
+
+  .view-toggle__btn.active {
+    @apply bg-surface-raised text-primary shadow-neo-sm border border-outline/40;
+  }
+
+  .product-card {
+    @apply card p-4 flex flex-col gap-3 card-hover;
+  }
+
+  .activity-dot {
+    @apply w-2 h-2 rounded-full flex-shrink-0;
+  }
+
+  .nav-section-label {
+    @apply px-3 pt-4 pb-1 text-[10px] font-semibold uppercase tracking-widest text-on-surface-variant/70 font-label-sm;
   }
 }
 
+<<<<<<< HEAD
 /* Recharts / Chart.js overrides */
+=======
+>>>>>>> 9f55e72
 canvas {
   max-width: 100%;
   filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.25));
 }
 
-/* Modal animation */
 .modal-overlay {
   animation: fadeIn 0.2s ease;
+<<<<<<< HEAD
   backdrop-filter: blur(8px);
+=======
+  background: rgba(30, 41, 59, 0.25);
+  backdrop-filter: blur(4px);
+>>>>>>> 9f55e72
 }
 
 .modal-content {
@@ -294,15 +573,20 @@ canvas {
   border: 1px solid rgba(255, 255, 255, 0.02) !important;
 }
 
-/* Loading spinner */
 .spinner {
+<<<<<<< HEAD
   border: 2px solid rgba(255, 255, 255, 0.05);
   border-top-color: #4cd7f6;
+=======
+  border: 2px solid #dce4ef;
+  border-top-color: #6366f1;
+>>>>>>> 9f55e72
   border-radius: 50%;
   animation: spin 0.7s linear infinite;
   box-shadow: 0 0 12px rgba(76, 213, 246, 0.2);
 }
 
+<<<<<<< HEAD
 /* Hide scrollbar */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -310,6 +594,15 @@ canvas {
 .no-scrollbar {
   -ms-overflow-style: none;  
   scrollbar-width: none;  
+=======
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+>>>>>>> 9f55e72
 }
 
 @keyframes spin {
